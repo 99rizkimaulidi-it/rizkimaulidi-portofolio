@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizki Maulidi | Senior IT Operations & Systems Portfolio</title>
+<meta name="description" content="Rizki Maulidi - Head of IT & Academic Systems, IT Support Specialist, and System Administrator with 7+ years of experience in infrastructure, networking, academic systems, documentation, and operational excellence.">
+<meta name="keywords" content="Rizki Maulidi, IT Support, System Administrator, Academic Systems, Network Engineer, IT Portfolio, Surabaya">
+<meta name="author" content="Rizki Maulidi">
+<meta property="og:title" content="Rizki Maulidi | Senior IT Operations & Systems Portfolio">
+<meta property="og:description" content="Modern IT portfolio for enterprise hiring, showcasing infrastructure, systems, operations, documentation, and certifications.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060816;
+  --bg2:#0b1022;
+  --card:rgba(14,20,40,.72);
+  --card-solid:#0f172a;
+  --line:rgba(255,255,255,.08);
+  --text:#edf4ff;
+  --muted:#8ea3bf;
+  --accent:#61dafb;
+  --accent2:#7c3aed;
+  --accent3:#22d3ee;
+  --success:#34d399;
+  --shadow:0 25px 70px rgba(0,0,0,.35);
+  --radius:24px;
+  --radius-sm:18px;
+  --max:1180px;
+}
+body.light{
+  --bg:#f3f7fb;
+  --bg2:#e9eef8;
+  --card:rgba(255,255,255,.75);
+  --card-solid:#ffffff;
+  --line:rgba(15,23,42,.08);
+  --text:#0f172a;
+  --muted:#5f728d;
+  --shadow:0 25px 60px rgba(18,38,63,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(97,218,251,.12), transparent 20%),
+    radial-gradient(circle at 85% 15%, rgba(124,58,237,.12), transparent 22%),
+    radial-gradient(circle at 50% 85%, rgba(34,211,238,.10), transparent 20%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  color:var(--text);
+  overflow-x:hidden;
+  transition:background .35s ease,color .35s ease;
+}
+#bg{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+}
+.noise{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  opacity:.06;
+  background-image:radial-gradient(circle at 20% 20%, #fff 0.6px, transparent 0.8px);
+  background-size:16px 16px;
+}
+.container{width:min(var(--max),calc(100% - 32px));margin:auto}
+.glass{
+  background:var(--card);
+  border:1px solid var(--line);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:var(--shadow);
+}
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:100;
+  background:rgba(6,8,22,.58);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+body.light nav{background:rgba(243,247,251,.72)}
+.nav-inner{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo-wrap{display:flex;align-items:center;gap:14px}
+.logo-badge{
+  width:44px;height:44px;border-radius:14px;
+  display:grid;place-items:center;
+  font-weight:900;font-size:15px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));
+  color:#04101a;box-shadow:var(--shadow);
+}
+.logo{font-weight:800;font-size:1rem;color:var(--text);letter-spacing:.2px}
+.logo small{display:block;color:var(--muted);font-size:.75rem;font-weight:600;margin-top:2px}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.menu{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.menu a{
+  text-decoration:none;color:var(--muted);font-size:.93rem;font-weight:500;transition:.25s ease;
+}
+.menu a:hover,.menu a.active{color:var(--text)}
+.toggle,.mini-btn{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  border-radius:999px;
+  padding:11px 16px;
+  font-size:.88rem;
+  font-weight:700;
+  cursor:pointer;
+}
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+  align-items:center;
+  padding-top:108px;
+}
+.hero-left,.hero-right{border-radius:32px}
+.hero-left{padding:38px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 14px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,255,255,.04);
+  color:var(--text);font-size:.86rem;font-weight:700;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(2.8rem,7vw,5.8rem);
+  line-height:.95;letter-spacing:-2px;margin-bottom:14px;
+}
+.gradient-text{
+  background:linear-gradient(135deg,#fff 5%, #a5d8ff 45%, #61dafb 75%, #c084fc 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h2{
+  font-size:clamp(1rem,2vw,1.3rem);
+  color:var(--accent);font-weight:700;margin-bottom:18px;
+}
+.hero p{
+  color:var(--muted);line-height:1.85;font-size:1rem;max-width:720px;margin-bottom:26px;
+}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:800;
+  transition:transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent3));color:#04131e;box-shadow:0 14px 34px rgba(97,218,251,.24)}
+.btn-secondary{background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--text)}
+.hero-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+}
+.metric{
+  padding:18px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid var(--line);
+}
+.metric h3{font-size:1.7rem;color:var(--accent);margin-bottom:4px}
+.metric p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}
+.hero-right{padding:22px;position:relative;overflow:hidden}
+.profile-shell{
+  min-height:620px;border-radius:28px;padding:24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(97,218,251,.16), transparent 26%),
+    radial-gradient(circle at 80% 15%, rgba(124,58,237,.14), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.10);
+  display:flex;flex-direction:column;justify-content:space-between;gap:16px;
+}
+.profile-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.status-pill{padding:10px 14px;border-radius:999px;background:rgba(52,211,153,.13);color:#a7f3d0;border:1px solid rgba(52,211,153,.2);font-weight:700;font-size:.84rem}
+.profile-photo-wrap{
+  display:grid;place-items:center;flex:1;padding:8px 0;
+}
+.profile-photo{
+  width:min(100%,320px);aspect-ratio:1/1.08;object-fit:cover;border-radius:28px;border:1px solid var(--line);
+  box-shadow:var(--shadow);background:#0b1220;
+}
+.profile-cards{display:grid;gap:12px}
+.profile-card{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.profile-card h3{font-size:1rem;margin-bottom:6px}
+.profile-card p{color:var(--muted);line-height:1.65;font-size:.93rem}
+main section{padding:88px 0}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px;
+}
+.section-head h2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-1px}
+.section-head p{max-width:720px;color:var(--muted);line-height:1.8}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{
+  border-radius:26px;padding:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);transition:.28s ease;
+}
+.card:hover{transform:translateY(-5px)}
+.card h3{font-size:1.15rem;margin-bottom:10px}
+.card p{color:var(--muted);line-height:1.75}
+.icon-dot{
+  width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:8px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+.skill-cloud{display:flex;flex-wrap:wrap;gap:10px}
+.skill-chip{
+  padding:11px 15px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:.92rem;font-weight:600;
+}
+.skill-bars{display:grid;gap:16px}
+.skill-item{display:grid;gap:8px}
+.skill-label{display:flex;justify-content:space-between;gap:10px;font-size:.95rem}
+.skill-track{height:10px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
+.skill-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--accent),var(--accent3),var(--accent2));transition:width 1.2s ease}
+.timeline{display:grid;gap:16px;position:relative}
+.timeline:before{content:'';position:absolute;left:11px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),transparent)}
+.timeline-item{position:relative;padding-left:40px}
+.timeline-item:before{content:'';position:absolute;left:3px;top:8px;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 0 7px rgba(97,218,251,.08)}
+.meta{color:var(--accent);font-size:.9rem;font-weight:700;margin-bottom:7px}
+.highlight-list{display:grid;gap:10px;margin-top:12px}
+.highlight-list li{color:var(--muted);line-height:1.65;margin-left:18px}
+.stats-band{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-card{text-align:center;padding:22px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+.stat-card strong{display:block;font-size:2rem;color:var(--accent);margin-bottom:6px}
+.project-card{display:flex;flex-direction:column;gap:14px;overflow:hidden;position:relative}
+.project-thumb{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:16px;border:1px solid var(--line);background:#0d1425}
+.project-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:.82rem;font-weight:700}
+.project-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.cert-card img,.project-card img{display:block}
+.cert-drive{padding:28px;text-align:center}
+.contact-wrap{display:grid;grid-template-columns:1fr .9fr;gap:20px}
+.contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.contact-links a{padding:12px 16px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--text);background:rgba(255,255,255,.05)}
+.footer{padding:34px 0 46px;color:var(--muted);text-align:center}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+.badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.badge{padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:.84rem;font-weight:700;color:var(--text)}
+@media (max-width: 1080px){
+  .hero,.grid-3,.grid-2,.contact-wrap,.stats-band{grid-template-columns:1fr 1fr}
+  .hero{min-height:auto;padding-top:110px;padding-bottom:40px}
+}
+@media (max-width: 860px){
+  .menu{display:none}
+  .hero,.grid-3,.grid-2,.contact-wrap,.stats-band,.hero-grid{grid-template-columns:1fr}
+  .hero-left,.hero-right{padding:22px}
+  .profile-shell{min-height:unset}
+  .section-head{align-items:flex-start;flex-direction:column}
+}
+@media (max-width: 560px){
+  .btn-row{display:grid;grid-template-columns:1fr}
+  .btn{width:100%}
+  .nav-inner{min-height:70px}
+  .hero h1{letter-spacing:-1.5px}
+}
+#loader{position:fixed;inset:0;background:#050816;display:flex;align-items:center;justify-content:center;z-index:2000;font-weight:800;font-size:20px;letter-spacing:2px;color:#61dafb}
+body.loaded #loader{display:none}
+
+.contact-form{display:grid;gap:12px;margin-top:16px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--text)}
+.contact-form button{padding:12px;border-radius:999px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent3));font-weight:700;cursor:pointer}
+
+</style>
+</head>
+<body>
+<div id="loader">LOADING PORTFOLIO...</div>
+<canvas id="bg"></canvas>
+<div class="noise"></div>
+<nav>
+  <div class="container nav-inner">
+    <div class="logo-wrap">
+      <div class="logo-badge">RM</div>
+      <div class="logo">Rizki Maulidi<small>Senior IT Operations & Systems Portfolio</small></div>
+    </div>
+    <div class="nav-actions">
+      <button class="toggle" onclick="toggleMode()">Light / Dark</button>
+      <a class="mini-btn" href="CV.pdf" download>Download CV</a>
+    </div>
+    <div class="menu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="container hero">
+  <div class="glass hero-left reveal">
+    <div class="eyebrow">⚡ Enterprise-Ready IT Professional • Systems • Infrastructure • Operations</div>
+    <h1><span class="gradient-text">Rizki Maulidi</span></h1>
+    <h2>Head of IT & Academic Systems • IT Support Specialist • System Administrator</h2>
+    <p>
+      IT professional with 6+ years of experience in higher-education environments, specializing in IT operations, academic systems, user support, network infrastructure, documentation, and process reliability. I bridge technical execution and operational needs to keep systems stable, secure, and efficient.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#contact">Hire Me</a>
+      <a class="btn btn-secondary" href="https://github.com/99rizkimaulidi-it" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn btn-secondary" href="https://drive.google.com/drive/folders/1I8O6ns2Utfmhrf4mzxUSpG_CWE8y3MVz?usp=sharing" target="_blank" rel="noreferrer">Certificates Drive</a>
+    </div>
+    <div class="hero-grid">
+      <div class="metric">
+        <h3>6+</h3>
+        <p>Years of hands-on IT operations, support, and systems management.</p>
+      </div>
+      <div class="metric">
+        <h3>50+</h3>
+        <p>Infrastructure, devices, and workflows maintained and improved.</p>
+      </div>
+      <div class="metric">
+        <h3>100+</h3>
+        <p>Technical issues resolved across systems, users, and operations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass hero-right reveal">
+    <div class="profile-shell">
+      <div class="profile-top">
+        <div class="status-pill">Open to Opportunities</div>
+        <div class="badge">Surabaya, Indonesia</div>
+      </div>
+      <div class="profile-photo-wrap">
+        <img class="profile-photo" src="profile.jpg" alt="Rizki Maulidi">
+      </div>
+      <div class="profile-cards">
+        <div class="profile-card">
+          <h3>Core Value</h3>
+          <p>Reliable IT execution with strong operational discipline, technical support excellence, and process improvement mindset.</p>
+        </div>
+        <div class="profile-card">
+          <h3>Best Fit Roles</h3>
+          <p>IT Support, System Administrator, IT Operations, Academic System Officer, Infrastructure Support, Technical Administration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Built for enterprise hiring</h2>
+        <p>This portfolio is structured to help recruiters and hiring managers quickly understand my strengths: infrastructure reliability, support responsiveness, systems administration, documentation discipline, and operational impact.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card reveal">
+          <h3><span class="icon-dot"></span>Infrastructure & Support</h3>
+          <p>Experienced in managing LAN/WiFi environments, device maintenance, troubleshooting, create software PWA, software installation, user support, and operational continuity.</p>
+        </article>
+        <article class="card reveal">
+          <h3><span class="icon-dot"></span>Academic Systems</h3>
+          <p>Hands-on experience supporting academic information systems, administration workflows, data handling, and technical support for institutional operations.</p>
+        </article>
+        <article class="card reveal">
+          <h3><span class="icon-dot"></span>Documentation & SOP</h3>
+          <p>Strong capability in building SOPs, user guides, structured documentation, and process references that improve quality, consistency, and organizational readiness.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Technical strengths</h2>
+        <p>A balanced profile across IT support, systems, networking, documentation, and user-facing operations.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card reveal">
+          <h3>Core Skills</h3>
+          <div class="skill-cloud">
+            <span class="skill-chip">IT Support & Helpdesk</span>
+            <span class="skill-chip">System Administration</span>
+            <span class="skill-chip">Network Troubleshooting</span>
+            <span class="skill-chip">LAN / WiFi</span>
+            <span class="skill-chip">Mikrotik Basic</span>
+            <span class="skill-chip">Hardware Maintenance</span>
+            <span class="skill-chip">Software Troubleshooting</span>
+            <span class="skill-chip">Academic Information Systems</span>
+            <span class="skill-chip">Microsoft Excel Advanced</span>
+            <span class="skill-chip">Documentation & SOP</span>
+            <span class="skill-chip">HTML / CSS / JavaScript</span>
+            <span class="skill-chip">Data Backup & Security</span>
+          </div>
+          <div class="badge-row">
+            <span class="badge">Google IT Support</span>
+            <span class="badge">Excel Expert</span>
+            <span class="badge">Applied AI</span>
+          </div>
+        </div>
+        <div class="card reveal">
+          <h3>Capability Snapshot</h3>
+          <div class="skill-bars">
+            <div class="skill-item">
+              <div class="skill-label"><span>IT Support & Troubleshooting</span><span>95%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="95%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Systems & Academic Operations</span><span>93%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="93%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Documentation & SOP Development</span><span>91%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="91%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Networking & Infrastructure Support</span><span>88%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-label"><span>Front-End Foundation</span><span>80%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="80%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Experience & impact</h2>
+        <p>Professional progression across administration, IT support, and leadership in IT and academic systems.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card reveal">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="meta">Oct 2023 — Present</div>
+              <h3>Head of IT & Academic Systems</h3>
+              <p>STIA & Manajemen Kepelabuhan Barunawati — Surabaya</p>
+              <ul class="highlight-list">
+                <li>Lead IT and academic systems operations to support institutional continuity and service quality.</li>
+                <li>Coordinate system stability, user support, infrastructure reliability, and technical problem solving.</li>
+                <li>Strengthen procedural clarity through documentation and operational standardization.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="meta">Aug 2018 — Oct 2023</div>
+              <h3>IT Support</h3>
+              <p>STIAMAK Barunawati — Surabaya</p>
+              <ul class="highlight-list">
+                <li>Handled daily troubleshooting, device maintenance, system setup, and end-user support.</li>
+                <li>Maintained technical readiness across hardware, software, and network access.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="meta">May 2019 — May 2022</div>
+              <h3>Administrative Staff — Academic Administration</h3>
+              <p>STIAMAK Barunawati — Surabaya</p>
+              <ul class="highlight-list">
+                <li>Supported academic administration workflows and operational data handling.</li>
+                <li>Built familiarity between academic processes and technical system requirements.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="reveal" style="display:grid;gap:16px">
+          <div class="stats-band">
+            <div class="stat-card"><strong>7+</strong><span>Years Experience</span></div>
+            <div class="stat-card"><strong>3</strong><span>Core Roles</span></div>
+            <div class="stat-card"><strong>5+</strong><span>Certifications</span></div>
+            <div class="stat-card"><strong>3x</strong><span>Best Employee</span></div>
+          </div>
+          <div class="card">
+            <h3>Why this matters for large companies</h3>
+            <p>My background combines technical reliability, user-facing responsiveness, operational structure, and documentation discipline. This creates a profile that fits environments where uptime, support quality, and process consistency are critical.</p>
+          </div>
+          <div class="card">
+            <h3>Operational mindset</h3>
+            <p>I focus on practical outcomes: stable systems, faster issue resolution, cleaner workflows, stronger support experience, and documentation that scales across teams.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Selected work</h2>
+        <p>Visual project cards that help recruiters quickly see the type of work I handle. Replace the screenshots below with your real project images.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card project-card reveal">
+          <img class="project-thumb" src="project1.jpg" alt="Academic System Management">
+          <h3>Academic System Management</h3>
+          <p>Managed and supported academic information systems used by lecturers, students, and administrative staff. Ensured system reliability, handled technical issues, assisted data operations, and maintained smooth academic workflows across departments.</p>
+          <div class="project-tags">
+            <span class="tag">Systems</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Support</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary" onclick="openProjectModal(this)">View Details</button>
+          </div>
+        </article>
+        <article class="card project-card reveal">
+          <img class="project-thumb" src="project2.jpg" alt="Network Infrastructure">
+          <h3>Network & Infrastructure Support</h3>
+          <p>Maintained and troubleshooted campus LAN/WiFi infrastructure, resolving connectivity issues, optimizing device access, and ensuring stable internet connectivity for academic operations and daily institutional activities.</p>
+          <div class="project-tags">
+            <span class="tag">Networking</span>
+            <span class="tag">Maintenance</span>
+            <span class="tag">Troubleshooting</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary" onclick="openProjectModal(this)">View Details</button>
+          </div>
+        </article>
+        <article class="card project-card reveal">
+          <img class="project-thumb" src="project3.jpg" alt="SOP and Documentation">
+          <h3>SOP & Technical Documentation</h3>
+          <p>Designed and documented operational SOPs, technical procedures, and academic workflow guidelines to standardize processes, improve service consistency, and support institutional readiness for audits and accreditation.</p>
+          <div class="project-tags">
+            <span class="tag">Documentation</span>
+            <span class="tag">SOP</span>
+            <span class="tag">Governance</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-secondary" onclick="openProjectModal(this)">View Details</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Certificates & achievements</h2>
+        <p>A dedicated proof section for recruiters. You can show certificate thumbnails and also link all of them through Google Drive.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card cert-card reveal">
+          <img class="project-thumb" src="cert1.jpg" alt="Google IT Support Professional">
+          <h3>Google IT Support Professional</h3>
+          <p>Foundational proof of skills in troubleshooting, networking, systems, customer support, and IT infrastructure fundamentals.</p>
+        </article>
+        <article class="card cert-card reveal">
+          <img class="project-thumb" src="cert2.jpg" alt="Microsoft Excel Expert">
+          <h3>Microsoft Excel Expert</h3>
+          <p>Advanced Excel capability for structured work, data handling, analysis support, and operational productivity.</p>
+        </article>
+        <article class="card cert-card reveal">
+          <img class="project-thumb" src="cert3.jpg" alt="Artificial Intelligence in Learning">
+          <h3>Artificial Intelligence in Learning</h3>
+          <p>Training related to practical AI application in learning and technology-enabled institutional environments.</p>
+        </article>
+      </div>
+      <div class="card cert-drive reveal" style="margin-top:20px">
+        <h3>Complete Certificate Collection</h3>
+        <p style="margin:12px 0 18px;color:var(--muted)">Replace the Google Drive URL below with your own folder link so hiring managers can view all certificates in one place.</p>
+        <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1I8O6ns2Utfmhrf4mzxUSpG_CWE8y3MVz?usp=sharing" target="_blank" rel="noreferrer">View All Certificates</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="card reveal">
+          <h2 style="font-size:2rem;margin-bottom:10px">Let’s talk</h2>
+          <p style="color:var(--muted);line-height:1.85">I am open to opportunities in IT Support, System Administration, IT Operations, Infrastructure Support, and Academic Systems roles. This portfolio is designed to make evaluation easy for recruiters, hiring managers, and technical leads.</p>
+          <div class="contact-links">
+            <a href="mailto:99rizkimaulidi@gmail.com">99rizkimaulidi@gmail.com</a>
+            <a href="tel:+6285117271399">+62 851-1727-1399</a>
+            <a href="https://www.linkedin.com/in/rizki-maulidi-it" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/99rizkimaulidi-it" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+
+          <form class="contact-form" action="https://formspree.io/f/mayvlvzz" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Message from recruiter..." required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="card reveal">
+          <h3>Publishing checklist</h3>
+          <ul class="highlight-list">
+            <li>Put your best photo in <strong>profile.jpg</strong>.</li>
+            <li>Rename your CV file as <strong>CV.pdf</strong>.</li>
+            <li>Add project screenshots as <strong>project1.jpg</strong>, <strong>project2.jpg</strong>, <strong>project3.jpg</strong>.</li>
+            <li>Add certificate thumbnails as <strong>cert1.jpg</strong>, <strong>cert2.jpg</strong>, <strong>cert3.jpg</strong>.</li>
+            <li>Replace GitHub, LinkedIn, and Google Drive links with your real links.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2026 Rizki Maulidi · IT Portfolio ·</div>
+</footer>
+
+<!-- Project Modal -->
+<div id="projectModal" style="position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:999">
+  <div style="max-width:700px;background:#0f172a;padding:30px;border-radius:20px;color:white">
+    <h2 id="modalTitle">Project</h2>
+    <p id="modalDesc" style="margin-top:10px;color:#cbd5e1">Detailed description of the project will appear here. You can customize this to explain impact, technologies used, and results.</p>
+    <br>
+    <button class="btn btn-primary" onclick="closeProjectModal()">Close</button>
+  </div>
+</div>
+
+<!-- Visitor Counter -->
+<div style="position:fixed;bottom:20px;right:20px;background:rgba(0,0,0,.6);padding:10px 14px;border-radius:10px;font-size:12px;color:#fff">
+  Visitors: <span id="visitorCount"></span>
+</div>
+
+<script>
+function openProjectModal(btn){
+  const card = btn.closest('.project-card');
+  const title = card.querySelector('h3').innerText;
+  const desc = card.querySelector('p').innerText;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDesc').innerText = desc;
+  document.getElementById('projectModal').style.display = 'flex';
+}
+
+function closeProjectModal(){
+  document.getElementById('projectModal').style.display='none';
+}
+
+// simple visitor counter
+if(localStorage.getItem('visits')){
+  localStorage.setItem('visits',Number(localStorage.getItem('visits'))+1)
+}else{
+  localStorage.setItem('visits',1)
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('visitorCount').innerText = localStorage.getItem('visits')
+})
+
+function toggleMode(){
+  document.body.classList.toggle('light');
+}
+
+const menuLinks=[...document.querySelectorAll('.menu a')];
+const sections=menuLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+function updateActiveLink(){
+  const y=window.scrollY+140;
+  sections.forEach((sec,i)=>{
+    const top=sec.offsetTop;
+    const bottom=top+sec.offsetHeight;
+    if(y>=top && y<bottom){
+      menuLinks.forEach(link=>link.classList.remove('active'));
+      if(menuLinks[i]) menuLinks[i].classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll',updateActiveLink);
+updateActiveLink();
+
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      entry.target.querySelectorAll('.skill-fill').forEach(bar=>{
+        bar.style.width=bar.dataset.width || '0%';
+      });
+    }
+  });
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const canvas=document.getElementById('bg');
+const ctx=canvas.getContext('2d');
+let particles=[];
+const mouse={x:null,y:null,radius:130};
+function resize(){
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+  createParticles();
+}
+function createParticles(){
+  const count=Math.min(120,Math.floor((window.innerWidth*window.innerHeight)/18000));
+  particles=Array.from({length:count},()=>({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    vx:(Math.random()-.5)*.45,
+    vy:(Math.random()-.5)*.45,
+    size:Math.random()*2+0.8
+  }));
+}
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let i=0;i<particles.length;i++){
+    const p=particles[i];
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>canvas.width) p.vx*=-1;
+    if(p.y<0||p.y>canvas.height) p.vy*=-1;
+    if(mouse.x!==null && mouse.y!==null){
+      const dx=mouse.x-p.x;
+      const dy=mouse.y-p.y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if(dist<mouse.radius){
+        p.x-=dx*0.006;
+        p.y-=dy*0.006;
+      }
+    }
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    ctx.fillStyle='rgba(97,218,251,0.72)';
+    ctx.fill();
+    for(let j=i+1;j<particles.length;j++){
+      const q=particles[j];
+      const lx=p.x-q.x; const ly=p.y-q.y;
+      const d=Math.sqrt(lx*lx+ly*ly);
+      if(d<110){
+        ctx.beginPath();
+        ctx.moveTo(p.x,p.y);
+        ctx.lineTo(q.x,q.y);
+        ctx.strokeStyle=`rgba(124,58,237,${0.12-d/1100})`;
+        ctx.lineWidth=1;
+        ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+window.addEventListener('mouseout',()=>{mouse.x=null;mouse.y=null;});
+window.addEventListener('resize',resize);
+resize();
+draw();
+
+window.addEventListener('load',()=>{
+ document.body.classList.add('loaded');
+});
+</script>
+</body>
+</html>
